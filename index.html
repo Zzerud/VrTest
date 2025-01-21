@@ -30,12 +30,24 @@
         <a-entity gltf-model="#animal" position="2 1 1"></a-entity>
 
         <a-box position="0 0 -3" rotation="0 45 45" color="red"></a-box>
-        <a-sphere position="0 1 5" rotation="0 0 90" radius="1.5" color="green" animation="property: rotation; to: 0 360 90; dur: 2000; loop: true"></a-sphere>
-        <a-sphere position="15 1 15" rotation="0 0 90" radius="1.5" color="green" animation="property: rotation; to: 0 360 90; dur: 2000; loop: true"></a-sphere>
-        <a-sphere position="15 1 0" rotation="0 0 90" radius="1.5" color="green" animation="property: rotation; to: 0 360 90; dur: 2000; loop: true"></a-sphere>
+        <a-sphere collectible position="0 1 5" rotation="0 0 90" radius="1.5" color="green" animation="property: rotation; to: 0 360 90; dur: 2000; loop: true"></a-sphere>
+        <a-sphere collectible position="15 1 15" rotation="0 0 90" radius="1.5" color="green" animation="property: rotation; to: 0 360 90; dur: 2000; loop: true"></a-sphere>
+        <a-sphere collectible position="15 1 0" rotation="0 0 90" radius="1.5" color="green" animation="property: rotation; to: 0 360 90; dur: 2000; loop: true"></a-sphere>
         <a-cylinder position="10 2 0" rotation="90 0 0" radius="1.25" height="12" color="blue"></a-cylinder>
 
 
     </a-scene>
+
+    <script>
+        AFRAME.registerComponent('collectible', {
+            init: function() {
+                this.el.addEventListener('click', () => {
+                    this.el.parentNode.removeChild(this.el);
+
+                    //let 
+                })
+            }
+        })
+    </script>
 </body>
 </html>
